@@ -25,6 +25,7 @@ changeColor = (val) => {
 goToHex = () => {
     containers[0].classList.add('d-none');
     containers[1].classList.remove('d-none');
+    // changeColor(newColor[index]);
 },
 goToHome = () => {
     for (let i = 1; i < btns.length; i++) {
@@ -67,7 +68,7 @@ btns.forEach(btn => {
                 changeColor(hexColor);
                 hexColor = '#';
                 break;
-                
+
             default:
                 break;
         };
