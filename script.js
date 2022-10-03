@@ -55,17 +55,19 @@ btns.forEach(btn => {
                 };
                 break;
             case btns[3]:
+                if(index < newColor.length - 1){
+                    index += 1;
+                    changeColor(newColor[index]);
+                };
+                break;
+            case btns[4]:
                 for (let i = 0; i < 6; i++) hexColor += hex[getRandomNumber()];
                 newColor.push(hexColor);
                 index = newColor.length - 1;
                 changeColor(hexColor);
                 hexColor = '#';
                 break;
-            case btns[4]:
-                if(index < newColor.length - 1){
-                    index += 1;
-                    changeColor(newColor[index]);
-                }
+                
             default:
                 break;
         };
